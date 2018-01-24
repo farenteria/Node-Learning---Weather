@@ -5,5 +5,7 @@ request({
     json: true
 },(error, response, body) =>{
     // last integer is # of spaces
-    console.log(JSON.stringify(body, undefined, 2));
+    console.log(`Address: ${body.results[0].formatted_address}`);
+    console.log(`Lattitude: ${body.results[0].geometry.location.lat}`);
+    console.log(`Longitude: ${body.results[0].geometry.location.lng}`);
 });
